@@ -4,39 +4,90 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  background-color: #e2e1e1;
+  font-weight: bold;
+  color: #4c4c4c;
+}
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+label {
+  display: flex;
+  justify-content: flex-start;
+}
+.btn_add {
+  width: 100%;
+  border: 1px solid #333 !important;
+  background-color: #333 !important;
+  color: #fff !important;
+}
+.btn_add:hover {
+  opacity: 0.8;
+}
+.btn-success {
+  border: 1px solid #06c046 !important;
+  background-color: #06c046 !important;
+}
+hr {
+  height: 0.1px !important;
+  color: #1d1d1d !important;
+  width: 100% !important;
+  background-color: red;
+}
+.flex_btns {
+  display: flex;
+  justify-content: space-around;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.opacity {
+  opacity: 0.5;
+}
+.bi-trash3 {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bi-trash3:hover {
+  color: red;
+}
+.bi-pen {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+.titulo {
+  color: #333;
+  font-weight: 800;
+  font-size: 40px;
+}
+.bi-arrow-left-circle:hover {
+  color: #06c046;
+}
+.scrollable-div {
+  /* Establecemos un alto máximo y habilitamos el desplazamiento vertical */
+  max-height: 400px; /* Puedes ajustar este valor según tus necesidades */
+  overflow-y: auto; /* Habilitamos el desplazamiento vertical cuando el contenido excede el alto máximo */
+}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.mi_media {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff4e7;
+  max-width: 400px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.mi_media {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img content";
+  margin-bottom: 1em;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.mi_media .text {
+  grid-area: content;
+  padding: 10px;
 }

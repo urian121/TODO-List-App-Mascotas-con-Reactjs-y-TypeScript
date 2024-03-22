@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Aplicación de Gestión de Contactos CRUD Full Stack con React, PHP y MySQL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##### La aplicación de Gestión de Contactos CRUD Full Stack con React, PHP y MySQL es un sistema completo para administrar contactos de manera eficiente. Permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una base de datos MySQL utilizando un backend desarrollado en PHP. La interfaz de usuario está construida con React, lo que proporciona una experiencia interactiva y receptiva para los usuarios. Con esta aplicación, los usuarios pueden agregar, ver, actualizar y eliminar contactos fácilmente, brindando una solución integral para la gestión de contactos en un entorno web.
 
-Currently, two official plugins are available:
+##### Instalar axios, para mejorar las solicitudes HTTP a la API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    npm i axios
 
-## Expanding the ESLint configuration
+#### Instalar la libreria react-toastify para crear las alertas.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    npm install --save react-toastify
 
-- Configure the top-level `parserOptions` property like this:
+#### Para correr el proyecto, solo basta instalar las dependencias y correr el proyecto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    npm install
+    npm run dev
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### Resultado final
+
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/agenda-contactos-react-php-y-mysql.png)
+
+### Expresiones de Gratitud 🎁
+
+    Comenta a otros sobre este proyecto 📢
+    Invita una cerveza 🍺 o un café ☕
+    Paypal iamdeveloper86@gmail.com
+    Da las gracias públicamente 🤓.
+
+## No olvides SUSCRIBIRTE 👍
+
+#### Que mascota te gusta menos
+
+    🐀    🐭    🐁    🐎
+    🐹    🐰    🐇    🐕‍🦺
+    🐦    🐢    🐍    🐟
+    🐠    🕷️    🐈‍⬛    🦜
+    🐶
+    🐕    🐩    🐱    🦎
+    🦮    🐈    🐴
