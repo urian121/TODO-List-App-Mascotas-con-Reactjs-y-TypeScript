@@ -1,33 +1,63 @@
-interface Props {
-  handleFormSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
-  handleNombreChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  handleEdadChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  handleSexoChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  handleGustoChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+import { useState } from "react";
+
+interface Mascota {
+  id: number;
   nombre: string;
   edad: number;
-  sexo: "macho" | "hembra";
+  sexo: "macho" | "hembra" | "";
   gusto: "poco" | "medio" | "bastante" | "mucho";
-  edades: number[];
 }
 
-/**
- * React.FC<Props> es una abreviatura de React.FunctionComponent<Props>. Es una interfaz genérica proporcionada por React que toma un parámetro de tipo Props y define un componente funcional en React.
+const FormularioMascota = () => {
+  const [nombre, setNombre] = useState<string>("");
+  const [edad, setEdad] = useState<number>(0);
+  const [sexo, setSexo] = useState<"macho" | "hembra">("macho");
+  const [gusto, setGusto] = useState<"poco" | "medio" | "bastante" | "mucho">(
+    "poco"
+  );
+  const [mascotas, setMascotas] = useState<Mascota[]>([]);
 
-Cuando defines un componente funcional en React utilizando React.FC<Props>, estás especificando el tipo de las props que el componente espera recibir. Esto ayuda a TypeScript a realizar comprobaciones de tipos estáticos en el componente para garantizar que se utilicen correctamente las props.
- */
-const FormularioMascota: React.FC<Props> = ({
-  handleFormSubmit,
-  handleNombreChange,
-  handleEdadChange,
-  handleSexoChange,
-  handleGustoChange,
-  nombre,
-  edad,
-  sexo,
-  gusto,
-  edades,
-}) => {
+  const edades: number[] = Array.from({ length: 16 }, (_, i) => i); // Lista de 0 a 15
+
+  const handleNombreChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNombre(event.target.value);
+  };
+
+  const handleEdadChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setEdad(Number(event.target.value));
+  };
+
+  const handleSexoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSexo(event.target.value as "macho" | "hembra");
+  };
+
+  const handleGustoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setGusto(event.target.value as "poco" | "medio" | "bastante" | "mucho");
+  };
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (nombre.trim() === "") return;
+
+    const nuevaMascota: Mascota = {
+      id: new Date().getTime(),
+      nombre: nombre.trim(),
+      edad: edad,
+      sexo: sexo,
+      gusto: gusto,
+    };
+
+    setMascotas([...mascotas, nuevaMascota]);
+    setNombre("");
+    setEdad(0);
+    setSexo("macho");
+    setGusto("poco");
+  };
+
+  const handleEliminarMascota = (id: number) => {
+    setMascotas(mascotas.filter((mascota) => mascota.id !== id));
+  };
+
   return (
     <>
       <h1>
@@ -36,7 +66,7 @@ const FormularioMascota: React.FC<Props> = ({
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="nombreMascota" className="form-label">
-            Nombre de la Mascota / Dueño
+            Nombre de la Mascota
           </label>
           <input
             type="text"
@@ -93,6 +123,20 @@ const FormularioMascota: React.FC<Props> = ({
           Registrar Mascota
         </button>
       </form>
+
+      <ul>
+        {mascotas.map((mascota) => (
+          <li key={mascota.id}>
+            <div>{mascota.nombre}</div>
+            <div>Edad: {mascota.edad}</div>
+            <div>Sexo: {mascota.sexo}</div>
+            <div>Gusto: {mascota.gusto}</div>
+            <button onClick={() => handleEliminarMascota(mascota.id)}>
+              Eliminar
+            </button>
+          </li>
+        ))}
+      </ul>
     </>
   );
 };

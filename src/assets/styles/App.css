@@ -76,16 +76,13 @@ hr {
 }
 
 .mi_media {
-  padding: 1em;
+  padding: 10px;
   border-radius: 5px;
   background-color: #fff4e7;
-  max-width: 400px;
-}
-.mi_media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
-  margin-bottom: 1em;
+  margin: 10px;
 }
 .mi_media .text {
   grid-area: content;

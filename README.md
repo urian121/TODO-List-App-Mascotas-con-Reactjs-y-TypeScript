@@ -1,6 +1,6 @@
-# Aplicación de Gestión de Contactos CRUD Full Stack con React, PHP y MySQL
+# TODO List App Mascotas con React y TypeScript
 
-##### La aplicación de Gestión de Contactos CRUD Full Stack con React, PHP y MySQL es un sistema completo para administrar contactos de manera eficiente. Permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una base de datos MySQL utilizando un backend desarrollado en PHP. La interfaz de usuario está construida con React, lo que proporciona una experiencia interactiva y receptiva para los usuarios. Con esta aplicación, los usuarios pueden agregar, ver, actualizar y eliminar contactos fácilmente, brindando una solución integral para la gestión de contactos en un entorno web.
+##### La aplicación "TODO List Mascotas" en React y TypeScript permite a los usuarios organizar tareas esenciales para el cuidado de sus mascotas. Con una interfaz intuitiva, los propietarios pueden agregar, eliminar y marcar como completadas las actividades relacionadas con el bienestar de sus compañeros peludos.
 
 ##### Instalar axios, para mejorar las solicitudes HTTP a la API
 
