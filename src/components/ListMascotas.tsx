@@ -43,7 +43,6 @@ const ListMascotas: React.FC<Props> = ({ handleizarMascota, mascotas }) => {
               alt="..."
             />
             <div className="text">
-              Nombre y Dueño:{" "}
               <span style={{ color: "Orange" }}>{mascota.nombre}</span>
               <p>
                 Edad: {mascota.edad} / Sexo: {mascota.sexo}

@@ -76,7 +76,7 @@ const FormularioMascota: React.FC<Props> = ({
         </div>
         <div className="mb-3">
           <label htmlFor="sexoMascota" className="form-label">
-            ¿Que tento te gusta de la mascota?
+            ¿Que tanto te gusta la mascota?
           </label>
           <select
             value={gusto}

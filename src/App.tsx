@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { ToastContainer, toast } from "./toastConfig";
 import FormularioMascota from "./components/FormularioMascota";
 import ListaMascotas from "./components/ListMascotas";
 import "./assets/styles/App.css";
@@ -52,6 +52,7 @@ function App() {
     };
 
     setMascotas([...mascotas, nuevaMascota]);
+    toast.success("Tarea editada correctamente");
     setNombre("");
     setEdad(0);
     setSexo("macho");
@@ -63,6 +64,7 @@ function App() {
   };
   return (
     <>
+      <ToastContainer />
       <h1 className="text-center titulo">
         TODO List App con React y TypeScript <hr />
       </h1>
