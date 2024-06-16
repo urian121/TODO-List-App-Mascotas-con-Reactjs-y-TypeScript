@@ -17,7 +17,7 @@
 
 #### Resultado final
 
-![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/agenda-contactos-react-php-y-mysql.png)
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/todo-app-mascota-con-typescript.png)
 
 ### Expresiones de Gratitud 🎁
 
@@ -34,6 +34,5 @@
     🐹    🐰    🐇    🐕‍🦺
     🐦    🐢    🐍    🐟
     🐠    🕷️    🐈‍⬛    🦜
-    🐶
     🐕    🐩    🐱    🦎
-    🦮    🐈    🐴
+    🦮    🐈    🐴    🐶
